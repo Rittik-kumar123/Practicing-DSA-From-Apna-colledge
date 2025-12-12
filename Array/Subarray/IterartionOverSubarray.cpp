@@ -1,0 +1,36 @@
+#include<iostream>
+#include<vector>
+#include<array>
+using namespace std;
+
+int main(){
+
+   int n;
+   cout<<"Enter The Size Of an array: ";
+   cin>>n;
+   cout<<"Your Array Size is "<<n<<endl;
+   vector<int> arr(n,0);
+   for(int i=0;i<n;i++)
+   {
+      cin>>arr[i];
+   }
+   cout<<"Your Array is "<<endl;
+   for(int i=0;i<n;i++)
+   {
+      cout<<arr[i]<<" ";
+   }
+   cout<<endl;
+   cout<<"All The Possible subarray in the given array are: ";
+   for(int start=0;start<n;start++)
+   {
+      for(int end=start;end<n;end++)
+      {
+         for(int it=start;it<=end;it++)
+         {
+            cout<<arr[it]<<" ";
+         }
+         cout<<endl;
+      }
+   }
+   return 0;
+}
